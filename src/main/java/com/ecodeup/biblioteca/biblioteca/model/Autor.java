@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @Entity
@@ -16,6 +18,8 @@ public class Autor {
     private String nombres;
     private String apellidos;
     private String telefonos;
+    @OneToMany(mappedBy = "autor")
+    private List<Libro> libros;
 
     public Autor(AutorDTO autorDTO) {
         this.id = autorDTO.getId();

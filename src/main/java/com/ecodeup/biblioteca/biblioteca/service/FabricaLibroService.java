@@ -14,11 +14,11 @@ public class FabricaLibroService {
         return new Libro(libroDTO);
     }
 
-    public LibroDTO crearLibro(Libro libro){
+    public LibroDTO crearLibroDTO(Libro libro){
         return new LibroDTO(libro);
     }
 
-    public List<LibroDTO> crearLibroDTO(List<Libro> libros){
+    public List<LibroDTO> crearLibrosDTO(List<Libro> libros){
         List<LibroDTO> libroTDOS = new ArrayList<>();
         libros.stream().forEach(
                 libro -> {
